@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Tetris/TetrisChecks.cs" />
+    <Compile Include="Snake/*.cs" />
+    <Compile Include="Racing/*.cs" />
+    <Compile Include="Platformer/*.cs" />
+    <Compile Include="Shared/StorageChecks.cs" />
+    <Compile Include="Console/ControllerChecks.cs" />
+    <Compile Include="../Games/**/*.cs" Link="Games/%(RecursiveDir)%(Filename)%(Extension)" />
+    <Compile Include="../Shared/**/*.cs" Link="Shared/%(RecursiveDir)%(Filename)%(Extension)" />
+    <Compile Include="../Console/GameCatalog.cs" Link="Console/GameCatalog.cs" />
+    <Compile Include="../Console/GameLibrary.cs" Link="Console/GameLibrary.cs" />
+    <Compile Include="../Console/ConsoleController.cs" Link="Console/ConsoleController.cs" />
+    <Compile Include="../Console/ConsoleViewState.cs" Link="Console/ConsoleViewState.cs" />
+    <PackageReference Include="Microsoft.Maui.Graphics" Version="10.0.20" />
+  </ItemGroup>
+</Project>
